@@ -4,13 +4,14 @@ Este projeto demonstra como usar o Appium com Python para interagir com um aplic
 
 ## Pré-requisitos
 
-1. **Appium Server**: Você precisa ter o Appium Server instalado e rodando. Pode ser instalado via npm:
+1. **Appium Server**: Você precisa ter o Appium Server instalado, o driver de automação instalado e o servidor do appium rodando. O appium pode ser instalado via npm:
    ```bash
    npm install -g appium
+   appium driver install uiautomator2
    appium
    ```
 
-2. **Android SDK**: Certifique-se de ter o SDK do Android instalado e configurado. Configure também o emulador ou dispositivo físico conectado via USB.
+2. **Android SDK**: Certifique-se de ter o SDK do Android instalado e configurado. Configure também o emulador ou dispositivo físico conectado via USB. Ajuste as variaveis de ambiente do Sdk do Android (ANDROID_HOME)
 
 3. **Python**: Certifique-se de ter o Python instalado (versão 3.7+).
 
@@ -36,7 +37,7 @@ Este projeto demonstra como usar o Appium com Python para interagir com um aplic
 1. Certifique-se de que o **Appium Server** está rodando:
 
    ```bash
-   appium
+   appium --allow-cors
    ```
 
 2. Certifique-se de que um **emulador Android** ou um **dispositivo Android** está conectado.
@@ -51,7 +52,7 @@ Este projeto demonstra como usar o Appium com Python para interagir com um aplic
    pytest
    ```
 
-O pytest irá rodar o script `test_hello_world.py`, abrir o aplicativo de calculadora Android, realizar a soma `1 + 1` e verificar se o resultado é `2`.
+O pytest irá rodar o script `test_appium_hello_world.py`, abrir o aplicativo de calculadora Android, realizar a soma `1 + 1` e verificar se o resultado é `2`.
 
 ## Personalizações
 
